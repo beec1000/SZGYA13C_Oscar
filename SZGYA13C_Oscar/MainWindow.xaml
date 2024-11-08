@@ -13,8 +13,10 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Oscar-díj filmek" Grid.Column="0" HorizontalAlignment="Center"/>
-        <ListBox x:Name="oDijasFilmList" VerticalAlignment="Center" HorizontalAlignment="Center" Height="360" Width="180"/>
+        <Label Content="Oscar-díj filmek" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30"/>
+        <ListBox x:Name="oDijasFilmList" VerticalAlignment="Top" HorizontalAlignment="Center" Height="180" Width="180" Margin="0,60,0,0"/>
+        <Label Content="Új Oscar-díj filmek" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Margin="0,245,0,0"/>
+        <ListBox x:Name="UJoDijasFilmList" VerticalAlignment="Top" HorizontalAlignment="Center" Height="180" Width="180" Margin="0,275,0,0"/>
 
         <GroupBox Grid.Column="1">
             <Grid>
@@ -45,13 +47,18 @@
 
                 <Button x:Name="ujFelvetelBTN" Content="Új film felvétele" Grid.Row="5" Click="ujFelvetelBTN_Click"/>
 
-                <Label Content="Film címe" Grid.Row="6" HorizontalAlignment="Left"/>
-                <Button x:Name="legtobbDijBTN" Content="Legtöbb díjat kapta" Grid.Row="6" HorizontalAlignment="Right" Width="200" Height="20"/>
+                <Label Content="Film címe" Grid.Row="6" HorizontalAlignment="Left" Foreground="Gray" />
+                <Label x:Name="filmCimeLB" Grid.Row="5" HorizontalAlignment="Left" Margin="60,39,0,0" Grid.RowSpan="2"/>
+                <Button x:Name="legtobbDijBTN" Content="Legtöbb díjat kapta" Grid.Row="6" HorizontalAlignment="Right" Width="200" Height="20" Click="legtobbDijBTN_Click"/>
 
                 <TextBox x:Name="keresettFilmTB" Text="" Grid.Row="7" HorizontalAlignment="Left" Width="200" Height="20" TextChanged="keresettFilmTB_TextChanged"/>
                 <Label x:Name="placeholder1" Content="Keresett film" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" Opacity="0.5" Visibility="Visible" />
+                <Button x:Name="keresBTN" Content="Keres" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Width="150" Height="20" Click="keresBTN_Click"/>
 
                 <Label Content="Találat kiírása" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label x:Name="talalatLB" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,0,0"/>
+
+                <Button x:Name="UJablak" Content="Új ablak" Grid.Row="9" VerticalAlignment="Center" HorizontalAlignment="Center" Click="UJablak_Click"/>
 
             </Grid>
         </GroupBox>
@@ -59,7 +66,7 @@
         <TextBox x:Name="keresettSzoTB" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center" Width="180"  TextChanged="keresettSzoTB_TextChanged"/>
         <Label x:Name="placeholder2" Content="Keresett szó" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Opacity="0.5" Visibility="Visible" Margin="10,-4,0,0" />
         <ListBox x:Name="list2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="360" Width="180"/>
-        <Button x:Name="listazzBTN" Content="Listázz" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="180" Height="20"/>
+        <Button x:Name="listazzBTN" Content="Listázz" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="180" Height="20" Click="listazzBTN_Click"/>
 
     </Grid>
 </Window>
