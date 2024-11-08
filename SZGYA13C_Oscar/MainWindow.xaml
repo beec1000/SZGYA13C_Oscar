@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SZGYA13C_Oscar"
         mc:Ignorable="d"
-        Title="Oscar-díjas filmek" Height="450" Width="800">
+        Title="Oscar-díjas filmek" Height="500" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -13,7 +13,7 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Oscar-díj filmek" Grid.Column="0" HorizontalContentAlignment="Center" Margin="1 1 1 1"/>
+        <Label Content="Oscar-díj filmek" Grid.Column="0" HorizontalAlignment="Center"/>
         <ListBox x:Name="oDijasFilmList" VerticalAlignment="Center" HorizontalAlignment="Center" Height="360" Width="180"/>
 
         <GroupBox Grid.Column="1">
@@ -43,7 +43,7 @@
                 <Label Content="Díjak száma" Grid.Row="4" HorizontalAlignment="Left"/>
                 <TextBox x:Name="dijTB" Grid.Row="4" HorizontalAlignment="Right" Width="200" Height="20"/>
 
-                <Button x:Name="ujFelvetelBTN" Content="Új film felvétele" Grid.Row="5"/>
+                <Button x:Name="ujFelvetelBTN" Content="Új film felvétele" Grid.Row="5" Click="ujFelvetelBTN_Click"/>
 
                 <Label Content="Film címe" Grid.Row="6" HorizontalAlignment="Left"/>
                 <Button x:Name="legtobbDijBTN" Content="Legtöbb díjat kapta" Grid.Row="6" HorizontalAlignment="Right" Width="200" Height="20"/>
@@ -56,9 +56,10 @@
             </Grid>
         </GroupBox>
 
-        <TextBox Grid.Column="2" HorizontalContentAlignment="Center" Margin="1 1 1 1"/>
-        <Label  />
+        <TextBox x:Name="keresettSzoTB" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center" Width="180"  TextChanged="keresettSzoTB_TextChanged"/>
+        <Label x:Name="placeholder2" Content="Keresett szó" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Opacity="0.5" Visibility="Visible" Margin="10,-4,0,0" />
         <ListBox x:Name="list2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="360" Width="180"/>
+        <Button x:Name="listazzBTN" Content="Listázz" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="180" Height="20"/>
 
     </Grid>
 </Window>

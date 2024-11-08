@@ -30,9 +30,9 @@ namespace SZGYA13C_Oscar
 
             string[] line = File.ReadAllLines(path);
 
-            foreach (var l in line)
+            foreach (var l in line.Skip(1))
             {
-                string[] s = l.Split("  ");
+                string[] s = l.Split("\t");
 
                 string Azonosito = s[0];
                 string Cim = s[1];
